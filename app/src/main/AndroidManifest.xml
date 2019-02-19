@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.javi.gestion_de_clientes">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zonaVenta.ZonaVentaInsertarActivity"
+            android:label="@string/title_activity_zona_venta"
+            android:parentActivityName=".DrawerActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".zonaVenta.ZonaVentaModificarActivity"
+            android:label="@string/title_activity_zona_venta"
+            android:parentActivityName=".zonaVenta.ZonaVentaActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+
+        <activity
+            android:name=".zonaVenta.ClientesActivity"
+            android:label="@string/title_activity_clientes"
+            android:launchMode="singleTop"
+            android:parentActivityName=".zonaVenta.ZonaVentaActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+
+        <activity
+            android:name=".ZonaVentaDetlleActivity"
+            android:parentActivityName=".DrawerActivity" />
+
+        <activity
+            android:name=".ClientesActivity"
+            android:label="@string/title_activity_drawer"
+            android:parentActivityName=".DrawerActivity" />
+        <activity
+            android:name=".DrawerActivity"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity
+            android:name=".ProductosActivity"
+            android:label="@string/title_activity_productos"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".DrawerActivity">
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".DrawerActivity">
+        </activity>
+
+        <activity
+            android:name=".zonaVenta.ZonaVentaActivity"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".DrawerActivity">
+        </activity>
+
+        <provider
+            android:name=".proveedor.ProveedorDeContenido"
+            android:authorities="com.example.javi.gestion_de_clientes.proveedor.ProveedorDeContenido"
+            android:enabled="true"
+            android:exported="true" />
+
+
+
+
+        <activity
+            android:name=".zonaVenta.ClienteDetalleActivity"
+            android:label="Detalle de Cliente"
+            android:launchMode="singleTop"
+            android:parentActivityName=".zonaVenta.ClientesActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+
+
+
+
+
+    </application>
+
+</manifest>
